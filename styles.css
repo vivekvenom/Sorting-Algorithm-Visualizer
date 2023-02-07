@@ -49,8 +49,28 @@ button:hover {
   box-shadow: 2px 2px 5px 2px white;
 }
 
-.active {
+.active1 {
   position: relative;
   background-color: coral;
   box-shadow: 2px 2px 5px 2px white;
+  animation: right 1s forwards reverse;
+}
+
+@keyframes right {
+  100% {
+    transform: translateX(48px);
+  }
+}
+
+.active2 {
+  position: relative;
+  background-color: coral;
+  box-shadow: 2px 2px 5px 2px white;
+  animation: left 1s forwards reverse;
+}
+
+@keyframes left {
+  100% {
+    transform: translateX(-48px);
+  }
 }

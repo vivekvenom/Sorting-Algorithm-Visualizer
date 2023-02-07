@@ -25,9 +25,11 @@ const sleep = (time) => {
 async function bubbleSort() {
   for (let i = 0; i < arrayBars.length; i++) {
     for (let j = 0; j < arrayBars.length - i - 1; j++) {
-      await sleep(1250);
-      const active = document.querySelectorAll(".active");
-      active.forEach((input) => input.classList.remove("active"));
+      await sleep(500);
+      const active1 = document.querySelectorAll(".active1");
+      const active2 = document.querySelectorAll(".active2");
+      active1.forEach((input) => input.classList.remove("active1"));
+      active2.forEach((input) => input.classList.remove("active2"));
       if (arrayBars[j] > arrayBars[j + 1]) {
         let temp = arrayBars[j];
         arrayBars[j] = arrayBars[j + 1];
@@ -38,13 +40,13 @@ async function bubbleSort() {
   }
 }
 
-function changeStyle(a, b, j) {
+async function changeStyle(a, b, j) {
   const bar1 = document.querySelector(`.bar${j}`);
   const bar2 = document.querySelector(`.bar${j + 1}`);
-  bar1.classList.add("active");
-  bar2.classList.add("active");
-  bar1.style.height = a + "px";
-  bar2.style.height = b + "px";
+  bar1.style.height = `${a}px`;
+  bar2.style.height = `${b}px`;
+  bar1.classList.add("active1");
+  bar2.classList.add("active2");
 }
 
 generate.addEventListener("click", arrayGenerate);
