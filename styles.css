@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: #645cbb;
+}
+
+.array-bars {
+  margin: 5% auto 5%;
+  width: 80%;
+  height: 60vh;
+  border: 5px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bar {
+  width: 2rem;
+  height: 80%;
+  background-color: white;
+}
+
+.buttons {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px 2px white;
+}
+
+.active {
+  position: relative;
+  background-color: coral;
+  box-shadow: 2px 2px 5px 2px white;
+}
